@@ -11,20 +11,30 @@ import static org.apache.tomcat.jni.User.username;
  */
 public class Conexion {
     Connection con;
-    String url = "jdbc:oracle:thin:@localhost:1521:SID"; 
+    String jdbcUrl  = "jdbc:oracle:thin:@localhost:1521:SID"; 
     String username = "sytem";
     String password  = "1234";
     Connection connection = null;
     public Connection Conexion(){
         
-        try {
-    connection = DriverManager.getConnection(url, username, password);
-    System.out.println("Conexión exitosa a la base de datos.");
-} catch (SQLException e) {
-    System.out.println("Error al conectar a la base de datos: " + e.getMessage());
-} 
+         try {
+            // Cargar el controlador JDBC
+            Class.forName("oracle.jdbc.OracleDriver");
+            
+            // Establecer la conexión
+            con = DriverManager.getConnection(jdbcUrl, username, password);
+            
+            // Realizar operaciones con la base de datos...
+            
+            // Cerrar la conexión
+            connection.close();
+            
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
         
-     return  connection;
+        
+     return  con ;
 }       
 }
 

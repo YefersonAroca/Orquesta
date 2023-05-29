@@ -1,0 +1,35 @@
+
+/*===================================================================================*/
+/* Los Géneros: 1 Música Culta; 2 Música Folclórica; 3 Música Popular*/
+/*====================================================================================*/
+INSERT INTO GENEROOBRA (IDGENEROOBRA, DESCGENERO)
+VALUES (1, 'Música Culta');
+
+INSERT INTO GENEROOBRA (IDGENEROOBRA, DESCGENERO)
+VALUES (2, 'Música Folclórica');
+
+INSERT INTO GENEROOBRA (IDGENEROOBRA, DESCGENERO)
+VALUES (3, 'Música Popular');
+
+
+/*===================================================================================*/
+/*5 obras reales con su compositor y país de donde se le considera la procedencia*/
+/*====================================================================================*/
+-- Insertar compositores
+INSERT INTO COMPOSITOR (IDCOMPOSITOR, NOMBRECOMPOSITOR) VALUES (1, 'Ludwig van Beethoven');
+INSERT INTO COMPOSITOR (IDCOMPOSITOR, NOMBRECOMPOSITOR) VALUES (2, 'Johann Sebastian Bach');
+INSERT INTO COMPOSITOR (IDCOMPOSITOR, NOMBRECOMPOSITOR) VALUES (3, 'Wolfgang Amadeus Mozart');
+INSERT INTO COMPOSITOR (IDCOMPOSITOR, NOMBRECOMPOSITOR) VALUES (4, 'Frédéric Chopin');
+INSERT INTO COMPOSITOR (IDCOMPOSITOR, NOMBRECOMPOSITOR) VALUES (5, 'Antonio Vivaldi');
+-- Insertar países
+INSERT INTO PAIS (CODPAIS, NOMBREPAIS) VALUES ('DE', 'Alemania');
+INSERT INTO PAIS (CODPAIS, NOMBREPAIS) VALUES ('AT', 'Austria');
+INSERT INTO PAIS (CODPAIS, NOMBREPAIS) VALUES ('PL', 'Polonia');
+INSERT INTO PAIS (CODPAIS, NOMBREPAIS) VALUES ('IT', 'Italia');
+INSERT INTO PAIS (CODPAIS, NOMBREPAIS) VALUES ('FR', 'Francia');
+-- Insertar obras
+INSERT INTO OBRA (CONSECALENDARIO, IDOBRA, CONSECCOMPOSITOR, CODPAIS, NOMBREOBRA) VALUES (1, 1, 1, 'DE', 'Sinfonía No. 5');
+INSERT INTO OBRA (CONSECALENDARIO, IDOBRA, CONSECCOMPOSITOR, CODPAIS, NOMBREOBRA) VALUES (2, 2, 2, 'DE', 'Concierto de Brandenburgo No. 3');
+INSERT INTO OBRA (CONSECALENDARIO, IDOBRA, CONSECCOMPOSITOR, CODPAIS, NOMBREOBRA) VALUES (3, 3, 3, 'AT', 'Serenata No. 13 "Eine kleine Nachtmusik"');
+INSERT INTO OBRA (CONSECALENDARIO, IDOBRA, CONSECCOMPOSITOR, CODPAIS, NOMBREOBRA) VALUES (4, 4, 4, 'PL', 'Nocturnos');
+INSERT INTO OBRA (CONSECALENDARIO, IDOBRA, CONSECCOMPOSITOR, CODPAIS, NOMBREOBRA) VALUES (5, 5, 5, 'IT', 'Las Cuatro Estaciones');

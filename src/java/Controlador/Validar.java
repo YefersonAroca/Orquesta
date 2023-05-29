@@ -96,6 +96,7 @@ public class Validar extends HttpServlet {
                 request.getRequestDispatcher("index.jsp").forward(request, response);
             }
             request.setAttribute("camisetas", camisetas);
+           
 
         }
         else{
